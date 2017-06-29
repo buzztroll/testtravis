@@ -1,0 +1,11 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+- docker pull carlad/sinatra
+- docker run -d -p 127.0.0.1:5820:5820 ubuntu echo hello
+
+script:
+- docker ps -a
