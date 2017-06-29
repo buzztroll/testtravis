@@ -9,7 +9,7 @@ before_install:
 - docker pull carlad/sinatra
 - echo $LICENSE | base64 --decode > /tmp/stardog-license-key.bin
 - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD complexible-eps-docker.jfrog.io
-- docker run -v /tmp/stardog-license-key.bin:/var/opt/stardog/stardog-license-key.bin -it complexible-eps-docker.jfrog.io/stardog:5.0
+- docker run -v /tmp/stardog-license-key.bin:/var/opt/stardog/stardog-license-key.bin -d -it complexible-eps-docker.jfrog.io/stardog:5.0
 
 script:
 - docker ps -a
