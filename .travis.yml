@@ -13,4 +13,4 @@ before_install:
 
 script:
 - docker ps -a
-- telnet localhost 5820 < /dev/null
+- sleep 90 && telnet localhost 5820 < /dev/null
