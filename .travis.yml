@@ -11,3 +11,4 @@ before_install:
 
 script:
 - docker ps -a
+- echo $LICENSE | base64 --decode > /tmp/x.bin
